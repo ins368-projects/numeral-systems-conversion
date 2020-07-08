@@ -5,7 +5,7 @@ namespace NumeralSystemsConversion.Converter
 {
     public class NumeralConverter
     {
-        public void test(){
+        public void IntToRoman(){
             var dict = new Dictionary<int, string>(){
 
                 {1000, "M"},

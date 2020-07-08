@@ -4,7 +4,7 @@ using NumeralSystemsConversion.Converter;
 
 namespace NumeralSystemsConversion.Tests
 {
-    public class UnitTest1
+    public class NumeralConverterUnitTests
     {
         [Fact]
         public void Test1()
