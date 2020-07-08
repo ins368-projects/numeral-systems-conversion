@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using NumeralSystemsConversion.Converter;
 
 namespace NumeralSystemsConversion.Tests
 {
@@ -8,7 +9,7 @@ namespace NumeralSystemsConversion.Tests
         [Fact]
         public void Test1()
         {
-
+            
         }
     }
 }

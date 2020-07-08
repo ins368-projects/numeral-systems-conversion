@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumeralSystemsConversion.Converter", "NumeralSystemsConversion.Converter\NumeralSystemsConversion.Converter.csproj", "{72E48A55-06A6-4423-9977-2365E0B2856B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumeralSystemsConversion.Tests", "NumeralSystemsConversion.Tests\NumeralSystemsConversion.Tests.csproj", "{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{72E48A55-06A6-4423-9977-2365E0B2856B}.Release|x64.Build.0 = Release|Any CPU
 		{72E48A55-06A6-4423-9977-2365E0B2856B}.Release|x86.ActiveCfg = Release|Any CPU
 		{72E48A55-06A6-4423-9977-2365E0B2856B}.Release|x86.Build.0 = Release|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Debug|x64.Build.0 = Debug|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Debug|x86.Build.0 = Debug|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Release|x64.ActiveCfg = Release|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Release|x64.Build.0 = Release|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Release|x86.ActiveCfg = Release|Any CPU
+		{B5FA398A-0729-4A8C-B9C0-50F56795C8B5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
