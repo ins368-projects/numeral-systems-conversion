@@ -3,21 +3,28 @@ using System.Collections.Generic;
 
 namespace NumeralSystemsConversion.Converter
 {
-    public class NumeralConverter
+    static public class NumeralConverter
     {
-        public void IntToRoman(){
-            var dict = new Dictionary<int, string>(){
+        static public string IntToRoman(int num){
+            if (num > 3999 || num < 1){
+                throw new IndexOutOfRangeException("Roman number needs to be between 1 and 3999");
+            }
 
-                {1000, "M"},
-                {900, "CM"},
-                {500, "D"},
-                {400, "CD"},
-                {100, "C"},
-                {90, "XC"}
-            };
+            int[] nums = {5, 1};
+            string[] romanNums = {"V", "I"};
 
-            var x = dict.Keys;
-            Console.WriteLine(x);
+            string romanNum = "";
+            int x = 0;
+            while(num > 0){
+                for (int i = 0; i < num / nums[x]; i++)
+                {
+                    romanNum += romanNums[x];
+                    num -= nums[x];
+                }
+                x++;
+            }
+
+            return romanNum;
         }
     }
 }
