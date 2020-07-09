@@ -77,6 +77,18 @@ namespace NumeralSystemsConversion.Tests
             Assert.Equal("MMXX", NumeralConverter.IntToRoman(2020));
         }
 
+        [Fact]
+        public void NegativeIntReturnsError()
+        {
+            Assert.Throws<IndexOutOfRangeException>(() => NumeralConverter.IntToRoman(-20));
+        }
+
+        [Fact]
+        public void Int10000ReturnsError()
+        {
+            Assert.Throws<IndexOutOfRangeException>(() => NumeralConverter.IntToRoman(10000));
+        }
+
 
 
     }
