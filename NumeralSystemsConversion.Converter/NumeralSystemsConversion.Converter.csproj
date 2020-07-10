@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>NumeralSystemsConverter</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Grupo no. 5</Authors>
+    <Company>INS368L</Company>
+    <Description>
+      Holds a class with methods to convert numbers in the hindu-arabic numeral system to the roman numeral system and viceversa.
+    </Description>
   </PropertyGroup>
 
 </Project>
