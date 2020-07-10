@@ -3,9 +3,18 @@ using System.Collections.Generic;
 
 namespace NumeralSystemsConversion.Converter
 {
+    /// <summary>
+    ///     Hold methods to convert numbers between Hindu-Arabic and roman numeral system .
+    /// </summary>
     static public class NumeralConverter
     {
-
+        /// <summary>
+        ///     Convert an hindu-arabic number to the roman numeral system.
+        /// </summary>
+        /// <param name="num">The hindu-arabic number to be converted</param>
+        /// <returns>
+        ///     The indicated number in roman numeral system.
+        /// </returns>
         static public string IntToRoman(int num)
         {
             if (num > 3999 || num < 1)
@@ -43,6 +52,13 @@ namespace NumeralSystemsConversion.Converter
            {'I', 1}
        };
 
+        /// <summary>
+        ///     Convert a ruman number to the hindu-arabic numeral system.
+        /// </summary>
+        /// <param name="romanNumber">The number in roman numeral system to be converted</param>
+        /// <returns>
+        ///     The indicated number in hindu-arabic numeral system.
+        /// </returns>
        public static int RomanToArab(string romanNumber) {
            romanNumber = romanNumber.ToUpper().Replace(" ","");
             int RomanLength = romanNumber.Length;
