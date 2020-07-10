@@ -11,13 +11,13 @@ namespace NumeralSystemsConversion.Converter
         /// <summary>
         ///     Convert an hindu-arabic number to the roman numeral system.
         /// </summary>
-        /// <param name="num">The hindu-arabic number to be converted</param>
+        /// <param name="hinduArabicNumber">The hindu-arabic number to be converted</param>
         /// <returns>
         ///     The indicated number in roman numeral system.
         /// </returns>
-        static public string IntToRoman(int num)
+        static public string HinduArabicToRoman(int hinduArabicNumber)
         {
-            if (num > 3999 || num < 1)
+            if (hinduArabicNumber > 3999 || hinduArabicNumber < 1)
             {
                 throw new IndexOutOfRangeException("Roman number needs to be between 1 and 3999");
             }
@@ -27,13 +27,13 @@ namespace NumeralSystemsConversion.Converter
 
             string romanNum = "";
             int x = 0;
-            while (num > 0)
+            while (hinduArabicNumber > 0)
             {
-                int limit = num / nums[x];
+                int limit = hinduArabicNumber / nums[x];
                 for (int i = 0; i < limit; i++)
                 {
                     romanNum += romanNums[x];
-                    num -= nums[x];
+                    hinduArabicNumber -= nums[x];
                 }
                 x++;
             }
@@ -59,7 +59,7 @@ namespace NumeralSystemsConversion.Converter
         /// <returns>
         ///     The indicated number in hindu-arabic numeral system.
         /// </returns>
-       public static int RomanToArab(string romanNumber) {
+       public static int RomanToHinduArabic(string romanNumber) {
            romanNumber = romanNumber.ToUpper().Replace(" ","");
             int RomanLength = romanNumber.Length;
             int result = 0;
