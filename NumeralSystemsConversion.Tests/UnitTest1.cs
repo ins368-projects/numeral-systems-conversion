@@ -10,181 +10,181 @@ namespace NumeralSystemsConversion.Tests
         [Fact]
         public void Int1ReturnsRomanI()
         {
-            Assert.Equal("I", NumeralConverter.IntToRoman(1));
+            Assert.Equal("I", NumeralConverter.HinduArabicToRoman(1));
         }
 
         [Fact]
         public void IntOverRomanRange()
         {
-            Assert.Throws<IndexOutOfRangeException>(() => NumeralConverter.IntToRoman(4000));
+            Assert.Throws<IndexOutOfRangeException>(() => NumeralConverter.HinduArabicToRoman(4000));
         }
 
         [Fact]
         public void IntUnderRomanRange()
         {
-            Assert.Throws<IndexOutOfRangeException>(() => NumeralConverter.IntToRoman(0));
+            Assert.Throws<IndexOutOfRangeException>(() => NumeralConverter.HinduArabicToRoman(0));
         }
 
         [Fact]
         public void Int2ReturnsRomanII()
         {
-            Assert.Equal("II", NumeralConverter.IntToRoman(2));
+            Assert.Equal("II", NumeralConverter.HinduArabicToRoman(2));
         }
 
         [Fact]
         public void Int5ReturnsRomanV()
         {
-            Assert.Equal("V", NumeralConverter.IntToRoman(5));
+            Assert.Equal("V", NumeralConverter.HinduArabicToRoman(5));
         }
 
         [Fact]
         public void Int10ReturnsRomanX()
         {
-            Assert.Equal("X", NumeralConverter.IntToRoman(10));
+            Assert.Equal("X", NumeralConverter.HinduArabicToRoman(10));
         }
 
         [Fact]
         public void Int4ReturnsRomanIV()
         {
-            Assert.Equal("IV", NumeralConverter.IntToRoman(4));
+            Assert.Equal("IV", NumeralConverter.HinduArabicToRoman(4));
         }
 
         [Fact]
         public void Int400ReturnsRomanCD()
         {
-            Assert.Equal("CD", NumeralConverter.IntToRoman(400));
+            Assert.Equal("CD", NumeralConverter.HinduArabicToRoman(400));
         }
 
         [Fact]
         public void Int48ReturnsRomanXLVIII()
         {
-            Assert.Equal("XLVIII", NumeralConverter.IntToRoman(48));
+            Assert.Equal("XLVIII", NumeralConverter.HinduArabicToRoman(48));
         }
 
         [Fact]
         public void Int498ReturnsRomanCDXCVIII()
         {
-            Assert.Equal("CDXCVIII", NumeralConverter.IntToRoman(498));
+            Assert.Equal("CDXCVIII", NumeralConverter.HinduArabicToRoman(498));
         }
 
         [Fact]
         public void Int1021ReturnsRomanMXXI()
         {
-            Assert.Equal("MXXI", NumeralConverter.IntToRoman(1021));
+            Assert.Equal("MXXI", NumeralConverter.HinduArabicToRoman(1021));
         }
         [Fact]
         public void Int2020ReturnsRomanMMXX()
         {
-            Assert.Equal("MMXX", NumeralConverter.IntToRoman(2020));
+            Assert.Equal("MMXX", NumeralConverter.HinduArabicToRoman(2020));
         }
 
         [Fact]
         public void NegativeIntReturnsError()
         {
-            Assert.Throws<IndexOutOfRangeException>(() => NumeralConverter.IntToRoman(-20));
+            Assert.Throws<IndexOutOfRangeException>(() => NumeralConverter.HinduArabicToRoman(-20));
         }
 
         [Fact]
         public void Int10000ReturnsError()
         {
-            Assert.Throws<IndexOutOfRangeException>(() => NumeralConverter.IntToRoman(10000));
+            Assert.Throws<IndexOutOfRangeException>(() => NumeralConverter.HinduArabicToRoman(10000));
         }
       
       //ROMAN TO ARAB
             
         public void RomanToArab_InputIII_Return3()
         {
-            var arabic = NumeralConverter.RomanToArab("III");
+            var arabic = NumeralConverter.RomanToHinduArabic("III");
             Assert.Equal(3, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputV_Return5()
         {
-            var arabic = NumeralConverter.RomanToArab("V");
+            var arabic = NumeralConverter.RomanToHinduArabic("V");
             Assert.Equal(5, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputIIII_ReturnNegativeOne()
         {
-            var arabic = NumeralConverter.RomanToArab("IIII");
+            var arabic = NumeralConverter.RomanToHinduArabic("IIII");
             Assert.Equal(-1, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputMoreThanThreeEqualNumbers_ReturnNegativeOne()
         {
-            var arabic = NumeralConverter.RomanToArab("XXXX");
+            var arabic = NumeralConverter.RomanToHinduArabic("XXXX");
             Assert.Equal(-1, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputRepetitionOfV_ReturnNegativeOne()
         {
-            var arabic = NumeralConverter.RomanToArab("VV");
+            var arabic = NumeralConverter.RomanToHinduArabic("VV");
             Assert.Equal(-1, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputRepetitionOfL_ReturnNegativeOne()
         {
-            var arabic = NumeralConverter.RomanToArab("LL");
+            var arabic = NumeralConverter.RomanToHinduArabic("LL");
             Assert.Equal(-1, arabic);
         }
         [Fact]
         public void RomanToArab_InputRepetitionOfD_ReturnNegativeOne()
         {
-            var arabic = NumeralConverter.RomanToArab("DDD");
+            var arabic = NumeralConverter.RomanToHinduArabic("DDD");
             Assert.Equal(-1, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputXXV_Return25()
         {
-            var arabic = NumeralConverter.RomanToArab("XXV");
+            var arabic = NumeralConverter.RomanToHinduArabic("XXV");
             Assert.Equal(25, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputIX_Return9()
         {
-            var arabic = NumeralConverter.RomanToArab("IX");
+            var arabic = NumeralConverter.RomanToHinduArabic("IX");
             Assert.Equal(9, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputInLowerCasexxiv_Return24()
         {
-            var arabic = NumeralConverter.RomanToArab("xxiv");
+            var arabic = NumeralConverter.RomanToHinduArabic("xxiv");
             Assert.Equal(24, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputWithSpacesVII_I_Return19()
         {
-            var arabic = NumeralConverter.RomanToArab("XI X");
+            var arabic = NumeralConverter.RomanToHinduArabic("XI X");
             Assert.Equal(19, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputIsNonValidLetter_ReturnNegativeOne()
         {
-            var arabic = NumeralConverter.RomanToArab("VAA");
+            var arabic = NumeralConverter.RomanToHinduArabic("VAA");
             Assert.Equal(-1, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputMMMM_ReturnNegativeOne()
         {
-            var arabic = NumeralConverter.RomanToArab("MMMM");
+            var arabic = NumeralConverter.RomanToHinduArabic("MMMM");
             Assert.Equal(-1, arabic);
         }
 
         [Fact]
         public void RomanToArab_InputMMMCMXCIX_Return3999()
         {
-            var arabic = NumeralConverter.RomanToArab("MMMCMXCIX");
+            var arabic = NumeralConverter.RomanToHinduArabic("MMMCMXCIX");
             Assert.Equal(3999, arabic);
         }
     }
