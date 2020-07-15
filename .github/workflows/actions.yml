@@ -21,15 +21,15 @@ jobs:
         run: dotnet test
 
   publish:
-    - name: Publish NuGet
-      runs-on: windows-latest
-      steps:
-        - uses: actions/checkout@v2
+    name: Publish NuGet
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
 
-        # Publish
-        - name: Publish on version change
-          id: publish_nuget
-          uses: rohith/publish-nuget@v2
-          with:
-            PROJECT_FILE_PATH: NumeralSystemsConversion.Converter/NumeralSystemsConversion.Converter.csproj
-            NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      # Publish
+      - name: Publish on version change
+        id: publish_nuget
+        uses: rohith/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: NumeralSystemsConversion.Converter/NumeralSystemsConversion.Converter.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
