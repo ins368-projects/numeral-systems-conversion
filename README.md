@@ -8,6 +8,13 @@ Holds a class with methods to convert numbers in the hindu-arabic numeral system
 
 ## API Key
 
+**To Upload**:
+```
+oy2jkr6fp57futiq33baq3zmkjapdoletffi2d42pwktze
+```
+
+**Antigua**:
+
 ```
 oy2fs3pmlb2twowpaevqppc7atzvvduuvjkpomor7aikue
 ```
